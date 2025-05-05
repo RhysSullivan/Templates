@@ -16,17 +16,24 @@
       "ttl": 3600
     },
     {
+      "type": "TXT",
+      "groupId": "verification-2",
+      "host": "_vercel",
+      "data": "vc-domain-verify=%verification-2%",
+      "ttl": 3600
+    },
+    {
       "type":"CNAME",
       "groupId": "subdomain",
       "host": "%subdomain%",
-      "pointsTo": "cname.vercel-dns.com",
+      "pointsTo": "%cname%",
       "ttl":3600
     },
     {
       "type": "A",
       "groupId": "apex",
       "host": "@",
-      "pointsTo": "76.76.21.21",
+      "pointsTo": "%ip%",
       "ttl": 3600
     }
   ]
